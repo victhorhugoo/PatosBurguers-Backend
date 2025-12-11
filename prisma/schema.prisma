@@ -1,0 +1,42 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelo Respostas delivery
+model respostasDelivery {
+  id Int @id @default(autoincrement())
+  nome String
+  email String 
+  telefone String
+  avaliacao1 String
+  avaliacao2 String
+  avaliacao3 String
+  avaliacao4 String
+  comentario String
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @default(now()) @updatedAt
+  brindeResgatado DateTime?
+}
+
+// Modelo Respostas Salão
+model respostasSalao {
+  id Int @id @default(autoincrement())
+  nome String
+  email String 
+  telefone String
+  avaliacao1 String
+  avaliacao2 String
+  avaliacao3 String
+  avaliacao4 String
+  comentario String
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @default(now()) @updatedAt
+  brindeResgatado DateTime?
+}
