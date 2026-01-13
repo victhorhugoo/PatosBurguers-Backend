@@ -7,7 +7,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.ts",
     "dev": "tsx watch --env-file=.env src/server.ts"
   },
   "keywords": [],
